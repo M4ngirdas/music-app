@@ -1,0 +1,57 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-Black;
+    src: url(fonts/Poppins-Black.ttf);
+}
+
+h2{
+    font-family: Poppins-Black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 3px solid;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(200, 235, 148);
+}
+label{
+    font-family: Poppins;
+}
+input{
+    font-family: Poppins;
+    
+}
+body {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    background-color: hsl(89, 48%, 82%);
+}
+div{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+label{
+    text-align: center;
+}
+input{
+    text-align: center;
+}
+.emailField {
+    top:413px;
+    right:290px;
+    width: 355px;
+    height: 30px;
+    position: absolute;
+    border: none;
+    font-size: 17;
+    text-align: center;
+}

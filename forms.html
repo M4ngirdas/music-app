@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvagzda</title>
+    <link rel="icon" type="image/png" href="images/sinsila.png">
+</head>
+<h2>Prisijunkite į Kvagzdą!</h2>
+<body>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+
+        <label for="username">Slapyvardis</label>
+        <input type="text" id="username" placeholder="Joris69" minlength="5" maxlength="12" required> <br> 
+
+        <label for="password">Slaptažodis</label>
+        <input type="password" id="password" minlength="5" maxlength="12" required> <br>
+
+        <label for="email">El. paštas</label>
+        <input type="email" id="email" placeholder="VardasPavarde@gmail.com"> <br>
+
+
+        <label type="phone">Tel. nr.</label>
+        <input type="tel" id="phone" placeholder="+370 1234567" pattern="[0-3]{0-7}"> <br>
+
+        <label for="bday">Gimimo data</label>
+        <input type="date" id="bday"><br>
+        
+        <label for="quantity">Kiekis</label>
+        <input type="number" id="quantity" min="0" max="99" value="1"><br>
+
+        <label for="title">Lytis:</label>
+
+        <label for="Vyras">Vyras</label>
+        <input type="radio" id="Vyras" value="Vyras" name="title">
+        <label for="Moteris">Moteris</label>
+        <input type="radio" id="Moteris" value="Moteris" name="title"><br>
+
+
+        <label for="payment">Mokėjimo būdas</label> 
+        <select id="payment">
+          <option value="visa">visa</option>
+          <option value="debit">debit</option> 
+          <option value="credit">credit</option>
+        </select> <br>
+
+        <label for="subscribe">Prenumeruoti</label>
+        <input type="checkbox" id="subscribe">
+        <br>
+        <label for="comment">Komentuoti</label>
+        <textarea id="comment" rows="2" cols="30"></textarea>
+        <br>
+        <label for="file">Failai</label>
+        <input type="file" id="file" accept="image/png, image/jpeg">
+
+
+
+
+
+        
+       
+        <br>
+        <br>
+        <input type="reset">
+        <input type="submit">
+        
+        
+    </form>
+</body>
+</html>

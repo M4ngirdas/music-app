@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batų parduotuvė</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="">
+    
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+    <div>
+    <h2>Sveiki - Prisijunkite norint
+        tęsti!
+    </h2>
+    
+    
+
+    <div>
+    <label for="name">Vardas</label>
+    <input type="text" id="name"  placeholder="Joris" maxlength="12"><br>
+
+
+    <label for="surname">Pavardė</label>
+    <input type="text" id="surname"  placeholder="Butkus" maxlength="12"><br>
+
+
+
+    <label for="password">Slaptažodis</label>
+    <input type="password" id="password"  placeholder="•••••••••••" minlength="6"><br>
+
+
+
+    <label for="email">El.Paštas</label>
+    <input type="email" id="email"  placeholder="VardasPavarde@gmail.com"><br>
+    
+
+
+
+    <label for="bday">Gimimo data</label>
+    <input type="date" id="bday" ><br> 
+    </div>
+
+
+    <label for="title">Lytis</label>
+
+    <span>
+    <label for="male">Vyras</label>
+    <input type="radio" id="male" value="Vyras" name="title">
+    </span> 
+
+    <span>
+    <label for="female">Moteris</label>
+    <input type="radio" id="female" value="Moteris" name="title">
+    </span>
+
+    <span>
+    <label for="other">Kita</label>
+    <input type="radio" id="other" value="Kita" name="title">
+    </span>
+
+    <a href="uzduotys.html">
+    <button>Toliau</button>
+    </a>
+
+    </div>
+    </form>
+</body>
+</html>
