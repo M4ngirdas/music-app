@@ -38,12 +38,16 @@ div{
     text-align: left;
     display: flex;
     flex-direction: column;
+    
 }
 label{
     text-align: center;
+    padding: 3px;
 }
 input{
     text-align: center;
+    padding: 3px;
+    
 }
 .emailField {
     top:413px;
@@ -54,4 +58,8 @@ input{
     border: none;
     font-size: 17;
     text-align: center;
+}
+button{
+    text-align: center;
+    width: 520px;
 }
