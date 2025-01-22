@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Batų parduotuvė</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/purplefavicon.png">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/zaliasbatas.png">
+  </head>
 <body>
-    <image>
+    <div class="logo"></div>
+      <div>
+      <p class="aboutus">
+        Mūsų batų parduotuvė pradėjo veiklą 2010 metais, siekdama pasiūlyti kokybišką, stilingą ir patogią avalynę kiekvienam. Per daugiau nei 15 metų užsitarnavome klientų pasitikėjimą, siūlydami žinomų prekės ženklų bei vietinių gamintojų produkciją.
+        Mūsų misija - derinti kokybę, madą ir patogumą, užtikrinant, kad kiekvienas rastų batus, atitinkančius savo poreikius.
+      </p> 
+      </div>
 
-    </image>
-    <div>
-    <h2>Sveiki - Prisijunkite norint
-        tęsti!
-    </h2>
-    
-    
 
-    <div>
+    <h2>Sveiki - Prisijunkite norint tęsti!</h2>
     <label for="name">Vardas</label>
-    <input type="text" id="name"  placeholder="Joris" maxlength="12"><br>
-
+    <input id="forms" type="text" id="name" placeholder="Vardenis" maxlength="12" /><br />
 
     <label for="surname">Pavardė</label>
-    <input type="text" id="surname"  placeholder="Butkus" maxlength="12"><br>
-
-
+    <input id="forms" type="text" id="surname" placeholder="Pavardenis" maxlength="12" /><br />
 
     <label for="password">Slaptažodis</label>
-    <input type="password" id="password"  placeholder="•••••••••••" minlength="6"><br>
-
-
+    <input id="forms" type="password" id="password" placeholder="•••••••••••" minlength="6">
+    <br>
 
     <label for="email">El.Paštas</label>
-    <input type="email" id="email"  placeholder="VardasPavarde@gmail.com"><br>
-    
+    <input id="forms" stype="email" id="email" placeholder="VardenisPavardenis@gmail.com">
+    <br>
 
-
-        <div>
-    <span>
     <label for="bday">Gimimo data</label>
-    <input type="date" id="bday" ><br> 
-    <span>
-    
+    <input id="forms" type="date" id="bday" /><br />
 
-            <span>
-    <label for="title">Lytis</label>
+    <span style="display: flex; flex-direction: column;" >
+        <label for="title">Lytis</label>
+      <span>
+        <span>
+            <label for="male">Vyras</label>
+            <input class="gender" type="radio" id="male" value="Vyras" name="title">
+        </span>
 
-    <span>
-        <span><label for="male">Vyras</label>
-        <input type="radio" id="male" value="Vyras" name="title"></span>
-     
+        <span>
+            <label for="female">Moteris</label>
+            <input class="gender" type="radio" id="female" value="Moteris" name="title">
+        </span>
 
-    
-        <span><label for="female">Moteris</label>
-        <input type="radio" id="female" value="Moteris" name="title"></span>
-    
-
-    
-        <span><label for="other">Kita</label>
-        <input type="radio" id="other" value="Kita" name="title"></span>
-    </span>
-        </div>
-            </span>
+        <span>
+            <label for="other">Kita</label>
+            <input class="gender" type="radio" id="other" value="Kita" name="title">
+        </span>
+      </span>
+        
+    <br>
 
     <a href="uzduotys.html">
-    <button>Toliau</button>
-
-
+        <button class="continueb">Toliau</button>
     </a>
-    </div>
-    </form>
 </body>
 </html>
