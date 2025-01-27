@@ -130,3 +130,8 @@ th {
   float: left;
   font-weight: bold;
 }
+
+footer {
+  background-color: hsl(84, 33%, 48%);
+  height: 130px;
+}

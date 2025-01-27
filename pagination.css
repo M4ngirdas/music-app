@@ -1,30 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: Poppins;
     src: url(fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
-    font-family: PoppinsBlack;
+    font-family: Poppins-Black;
     src: url(fonts/Poppins-Black.ttf);
 }
-
 
 header {
     background-color: hsl(84, 33%, 48%);
     padding: 0.3px;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     font-size: 35px;
     font-weight: bold;
-    font-family: PoppinsBlack;
+    font-family: Poppins-Black;
+}
+
+h2 {
+    font-size: 20px;
 }
 
 body {
     background-color: hsl(89, 48%, 82%);
+    font-family: Poppins;
     margin: 0px;
 }
+
+p {
+    font-family: Poppins;
+    text-align: center;
+}
+
+h2 {
+    font-family: Poppins-Black;
+}
+
+table {
+    font-family: Poppins;
+    background-color: hsl(84, 69%, 75%);
+    margin: 10px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    padding: 5px;
+    text-align: center;
+    font-family: Poppins-Black;
+    background-color: hsl(84, 54%, 61%);
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    border-radius: 100px;
+    background-image: url(images/zaliasbatas.png);
+    background-position: center;
+    background-size: 150px;
+    margin: 10px;
+}
+
+
+.oltitle {
+    text-align: center;
+}
+
+
 
 .navbar ul {
     display: flex;
@@ -51,4 +117,35 @@ body {
 .navbar li {
     float: left;
     font-weight: bold;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    color: hsl(0, 0%, 0%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.pagination a.active {
+    background-color: hsl(84, 48%, 55%);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: hsl(84, 68%, 73%);
+}
+
+.icons {
+    text-align: center;
+    border: 2px solid;
+}
+
+.why {
+    display: inline-block;
+    border: 2px solid;
 }
