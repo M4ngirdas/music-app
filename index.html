@@ -10,60 +10,21 @@
 </head>
 
 <body>
-  <div class="logo"></div>
-  <div>
-    <p class="aboutus">
-      Mūsų batų parduotuvė pradėjo veiklą 2010 metais, siekdama pasiūlyti kokybišką, stilingą ir patogią avalynę
-      kiekvienam. Per daugiau nei 15 metų užsitarnavome klientų pasitikėjimą, siūlydami žinomų prekės ženklų bei
-      vietinių gamintojų produkciją.
-      Mūsų misija - derinti kokybę, madą ir patogumą, užtikrinant, kad kiekvienas rastų batus, atitinkančius savo
-      poreikius.
-    </p>
-  </div>
-
-
-  <h2>Sveiki - Prisijunkite norint tęsti!</h2>
-  <label for="name">Vardas</label>
-  <input id="forms" type="text" id="name" placeholder="Vardenis" maxlength="12" /><br />
-
-  <label for="surname">Pavardė</label>
-  <input id="forms" type="text" id="surname" placeholder="Pavardenis" maxlength="12" /><br />
-
-  <label for="password">Slaptažodis</label>
-  <input id="forms" type="password" id="password" placeholder="•••••••••••" minlength="6">
-  <br>
-
-  <label for="email">El.Paštas</label>
-  <input id="forms" stype="email" id="email" placeholder="VardenisPavardenis@gmail.com">
-  <br>
-
-  <label for="bday">Gimimo data</label>
-  <input id="forms" type="date" id="bday" /><br />
-
-  <span style="display: flex; flex-direction: column;">
-    <label for="title">Lytis</label>
-    <span>
-      <span>
-        <label for="male">Vyras</label>
-        <input class="gender" type="radio" id="male" value="Vyras" name="title">
-      </span>
-
-      <span>
-        <label for="female">Moteris</label>
-        <input class="gender" type="radio" id="female" value="Moteris" name="title">
-      </span>
-
-      <span>
-        <label for="other">Kita</label>
-        <input class="gender" type="radio" id="other" value="Kita" name="title">
-      </span>
-    </span>
-
+  <div class="login-container">
+    <h2>Sveiki - Prisijunkite norint tęsti!</h2><br>
+    <label for="name">El. Paštas</label>
+    <input id="forms" type="email" id="email" placeholder="VardenisPavardenis@gmail.com" maxlength="12">
     <br>
+    <label for="password">Slaptažodis</label>
+    <input id="forms" type="password" id="password" placeholder="•••••••••••" minlength="6"><br>
+
+    <div id="register">Neturite paskyros? <a class="clickme" href="register.html">Spauskite čia!</a></div>
 
     <a href="uzduotys.html">
       <button class="continueb">Toliau</button>
     </a>
+  </div>
+
 
 </body>
 
