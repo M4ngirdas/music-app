@@ -9,7 +9,7 @@
 }
 
 header {
-  background-color: hsl(84, 33%, 48%);
+  background-color: hsl(84, 36%, 54%);
   padding: 0.3px;
 }
 
@@ -22,7 +22,7 @@ header {
   text-align: center;
 }
 
-h1 {
+.header {
   text-align: center;
   font-size: 35px;
   font-weight: bold;
@@ -34,7 +34,7 @@ h2 {
 }
 
 body {
-  background-color: hsl(89, 48%, 82%);
+  background-color: hsl(88, 47%, 86%);
   font-family: Poppins;
   margin: 0px;
 }
@@ -74,7 +74,10 @@ th {
   background-image: url(images/zaliasbatas.png);
   background-position: center;
   background-size: 150px;
-  margin: 10px;
+  margin-left: 200px;
+  animation-name: slideLeft;
+  animation-duration: 2s;
+  animation-play-state: running;
 }
 
 .pagination {
@@ -106,32 +109,89 @@ th {
 
 .navbar ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
-  background-color: hsl(84, 54%, 61%);
+  background-color: hsl(84, 54%, 65%);
   padding: 0px;
   margin: 0px;
   overflow: hidden;
+  width: 60vh;
+}
+
+.navcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  background-color: hsl(84, 54%, 65%);
 }
 
 .navbar a {
   color: hsl(0, 0%, 0%);
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
   padding: 20px;
   display: block;
   text-align: center;
 }
 
 .navbar a:hover {
-  background-color: hsl(84, 48%, 55%);
+  background-color: hsl(85, 48%, 58%);
 }
 
 .navbar li {
-  float: left;
+  width: 33%;
   font-weight: bold;
 }
 
-footer {
-  background-color: hsl(84, 33%, 48%);
-  height: 130px;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  border: 1px solid hsl(0, 0%, 0%);
+  border-left: none;
+  border-right: none;
+  padding: 35px;
+  background-color: hsl(89, 39%, 78%);
+  box-shadow: 0px 0px 6px hsl(0, 0%, 19%);
+}
+
+.slogan {
+  text-align: center;
+  margin-right: 200px;
+  animation-name: slideRight;
+  animation-duration: 2s;
+  animation-play-state: running;
+}
+
+#slogan1 {
+  font-family: Poppins;
+  font-size: 40px;
+}
+
+#slogan2 {
+  font-family: Poppins;
+  font-size: 27px;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-300px)
+  }
+
+}
+
+#aboutus {
+  border-left: 2px solid hsl(0, 0%, 0%);
+  border-right: 2px solid hsl(0, 0%, 0%);
 }

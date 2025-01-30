@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="uzduotiestyle.css">
+  <link rel="stylesheet" href="uzdstyle.css">
   <link rel="icon" href="images/zaliasbatas.png">
   <title>Batų parduotuvė</title>
   <style>
@@ -19,29 +19,32 @@
 
 <body>
   <header>
-    <h1>Batų parduotuvė</h1>
+    <h1 class="header">Batų parduotuvė</h1>
   </header>
-  <nav class="navbar">
-    <ul>
-      <li><a href="uzduotys.html">Pagrindinis</a></li>
-      <li><a href="aboutus.html">Apie mus</a></li>
-      <li><a href="contacts.html">Kontaktai</a></li>
-    </ul>
-  </nav>
   <main>
+    <div class="navcontainer">
+      <nav class="navbar">
+        <ul>
+          <li><a href="uzduotys.html">Pagrindinis</a></li>
+          <li id="aboutus"><a href="aboutus.html">Apie mus</a></li>
+          <li><a href="contacts.html">Kontaktai</a></li>
+        </ul>
+      </nav>
+    </div>
     <br>
     <br>
 
     <br>
-    <div class="logo"></div>
-
+    <div class="container">
+      <div class="logo"></div>
+      <div class="slogan">
+        <h1 id="slogan1">Stilius prasideda -</h1>
+        <h2 id="slogan2">nuo batų!</h2>
+      </div>
+    </div>
     <br>
-
-    <video width="450" height="300" controls muted>
-      <source src="videos/Epic Adidas shoe commercial concept _ product video B-ROLL 1080.mp4" />
-    </video>
   </main>
-  <footer>Kontaktai:</footer>
+
 </body>
 
 </html>
