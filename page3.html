@@ -21,13 +21,15 @@
     <header>
         <h1>Batų parduotuvė</h1>
     </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="uzduotys.html">Pagrindinis</a></li>
-            <li><a href="aboutus.html">Apie mus</a></li>
-            <li><a href="contacts.html">Kontaktai</a></li>
-        </ul>
-    </nav>
+    <div class="navcontainer">
+        <nav class="navbar">
+            <ul>
+                <li><a href="uzduotys.html">Pagrindinis</a></li>
+                <li id="aboutus"><a href="aboutus.html">Apie mus</a></li>
+                <li><a href="contacts.html">Kontaktai</a></li>
+            </ul>
+        </nav>
+    </div>
     <main>
         <h1>Apie mus</h1>
         <br>
@@ -63,18 +65,19 @@
             </tr>
         </table>
 
-            <div class="pagination">
-                <a href="page2.html"><</a>
-                <a href="why.html">1</a>
-                <a href="page2.html">2</a>
-                <a href="page3.html" class="active">3</a>
-                <a href="page4.html">4</a>
-                <a href="page5.html">5</a>
-                <a href="page4.html">></a>
-            </div>
+        <div class="pagination">
+            <a href="page2.html">
+                << /a>
+                    <a href="why.html">1</a>
+                    <a href="page2.html">2</a>
+                    <a href="page3.html" class="active">3</a>
+                    <a href="page4.html">4</a>
+                    <a href="page5.html">5</a>
+                    <a href="page4.html">></a>
+        </div>
     </main>
 
-<footer></footer>
+    <footer></footer>
 </body>
 
 </html>
