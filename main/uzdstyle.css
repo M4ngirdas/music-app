@@ -7,11 +7,6 @@
   src: url(../fonts/madeTommy-Regular.otf);
 }
 
-header {
-  background-color: hsl(0, 0%, 100%);
-  padding: 0.3px;
-}
-
 .header {
   text-align: center;
   font-size: 35px;
@@ -25,6 +20,7 @@ h2 {
 body {
   background-color: hsl(87, 44%, 88%);
   margin: 0px;
+  overflow-x: hidden;
 }
 
 p {
@@ -125,7 +121,6 @@ th {
   font-weight: bold;
 }
 
-
 .container {
   display: flex;
   align-items: center;
@@ -135,7 +130,7 @@ th {
   border-left: none;
   border-right: none;
   padding: 35px;
-  background-color: hsl(90, 36%, 80%);
+  background-color: hsl(89, 44%, 83%);
   box-shadow: 0px 0px 6px hsl(0, 0%, 19%);
 }
 
@@ -171,4 +166,65 @@ th {
 #aboutus {
   border-left: 2px solid hsl(0, 0%, 0%);
   border-right: 2px solid hsl(0, 0%, 0%);
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+#searchBox {
+  width: 400px;
+  padding: 7px;
+  border: hsl(0, 0%, 0%);
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px;
+}
+
+#myButton {
+  width: 75px;
+  text-align: center;
+  margin-left: 10px;
+  border: 1px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button {
+  background-color: hsl(0, 0%, 85%);
+  padding: 15px 30px;
+  cursor: pointer;
+  border: 1px solid hsl(0, 0%, 0%);
+}
+
+.dropdown a {
+  display: block;
+  background-color: hsl(0, 0%, 80%);
+  padding: 10px 15px;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+}
+
+.dropdown .content {
+  position: absolute;
+  display: none;
+  width: 100px;
+  text-align: center;
+  margin: auto;
+}
+
+.dropdown:hover .content {
+  display: block;
+}
+
+.myContainer {
+  text-align: center;
+  padding: 15px;
 }
