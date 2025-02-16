@@ -69,8 +69,7 @@ input {
     border-radius: 8px;
     text-align: center;
     padding: 5px;
-
-
+    width: 415px;
 }
 
 input[type="radio"] {
