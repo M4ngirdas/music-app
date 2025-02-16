@@ -1,21 +1,29 @@
 * {
-    font-family: madeTommy;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-    font-family: madeTommy;
-    src: url(../fonts/madeTommy-Regular.otf);
+    font-family: 'Inter';
+    src: url(/fonts/Inter_28pt-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter ExtraBold';
+    src: url(/fonts/Inter_18pt-ExtraBold.ttf);
 }
 
 body {
+    font-size: 1.2em;
     height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 88%);
+    overflow: hidden;
 }
 
 #welcome {
+    font-family: 'Inter ExtraBold', Arial, Helvetica, sans-serif;
     border: 2px solid hsl(0, 0%, 0%);
     border-radius: 8px;
     padding: 20px;

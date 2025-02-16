@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Batų parduotuvė</title>
   <link rel="stylesheet" href="/login-register/style.css">
   <link rel="icon" href="/images/zaliasbatas.png">
@@ -13,20 +15,23 @@
     <h2>Prisijunkite ir raskite batus, kurie atspindi jus!</h2>
     <div class="logo"></div>
   </div>
-  <div class="login-container">
-    <h2 id="welcome">Prisijunkite norint tęsti!</h2><br>
-    <label for="name">El. Paštas</label>
-    <input type="email" id="email" name="email" placeholder="VardenisPavardenis@gmail.com" maxlength="12" required>
-    <br>
-    <label for="password">Slaptažodis</label>
-    <input type="password" id="password" name="password" placeholder="•••••••••••" minlength="6" required><br>
 
-    <div id="register">Neturite paskyros? <a class="clickme" href="register.html">Spauskite čia!</a></div>
+  <div class="login-container">
+    <h2 id="welcome">Prisijunkite norint tęsti!</h2>
+
+    <label for="email">El. Paštas</label>
+    <input type="email" id="email" name="email" placeholder="VardenisPavardenis@gmail.com" maxlength="12" required>
+
+    <label for="password">Slaptažodis</label>
+    <input type="password" id="password" name="password" placeholder="•••••••••••" minlength="6" required>
+
+    <div id="register">
+      Neturite paskyros? <a class="clickme" href="register.html">Spauskite čia!</a>
+    </div>
+
     <a href="../main/uzduotys.html">
       <button class="continueb">Toliau</button>
     </a>
-  </div>
-  <div>
   </div>
 </body>
 
