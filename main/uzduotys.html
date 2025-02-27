@@ -4,49 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../main/uzdstyle.css">
-  <link rel="icon" href="../images/zaliasbatas.png">
+  <link rel="stylesheet" href="/main/uzdstyle.css">
+  <link rel="icon" href="/images/zaliasbatas.png">
+  <script src="https://kit.fontawesome.com/2f35c9845e.js" crossorigin="anonymous"></script>
   <title>Batų parduotuvė</title>
-  <style>
-    table,
-    th,
-    td {
-      border: 2px solid black;
-      border-radius: 6px;
-    }
-  </style>
 </head>
 
 <body>
   <header>
-    <div class="navcontainer">
+    <div class="nav-container">
+      <div class="logo">
+        <div id="myPicture"></div>
+        <h1>Batų parduotuvė</h1>
+      </div>
       <nav class="navbar">
-        <ul>
-          <li><a href="/main/uzduotys.html">Pagrindinis</a></li>
-          <li id="aboutus"><a href="/main/aboutus.html">Apie mus</a></li>
-          <li><a href="/main/contacts.html">Kontaktai</a></li>
-        </ul>
+        <a href="#" id="main">Pagrindinis</a>
+        <a href="aboutus.html" id="aboutus">Apie mus</a>
+        <a href="contacts.html" id="contacts">Kontaktai</a>
       </nav>
-    </div>
-  </header>
-  <main>
-    <br>
-    <br>
-
-    <br>
-    <div class="container">
-      <div class="logo"></div>
-      <div class="slogan">
-        <h1 id="slogan1">Stilius prasideda -</h1>
-        <h2 id="slogan2">nuo batų!</h2>
+      <div id="icons">
+        <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+        <i class="fa-solid fa-gear fa-2xl"></i>
+        <i class="fa-solid fa-user fa-2xl"></i>
       </div>
     </div>
-    <br>
+  </header>
 
+  <section id="search">
     <form class="search">
       <input type="search" id="searchBox" placeholder="Paieška">
       <button type="submit" id="myButton">Ieškoti</button>
     </form>
+
     <div class="myContainer">
       <div class="dropdown">
         <button class="myButton">Vyrams</button>
@@ -81,9 +70,7 @@
         </div>
       </div>
     </div>
-
-  </main>
-
+  </section>
 </body>
 
 </html>

@@ -1,60 +1,119 @@
 * {
-  font-family: madeTommy, Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 @font-face {
-  font-family: madeTommy;
-  src: url(../fonts/madeTommy-Regular.otf);
+  font-family: 'Inter';
+  src: url(/fonts/Inter_28pt-Regular.ttf);
 }
 
-.header {
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
+@font-face {
+  font-family: 'Inter Bold';
+  src: url(/fonts/Inter_28pt-Bold.ttf);
 }
 
-h2 {
-  font-size: 20px;
+header {
+  position: sticky;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  color: #1e1e20;
+
 }
 
-body {
-  background-color: hsl(87, 44%, 88%);
-  margin: 0px;
-  overflow-x: hidden;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f5ef;
+  padding: 25px 7%;
 }
 
-p {
-  text-align: center;
+.navbar a {
+  letter-spacing: 0.5px;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  color: #1a1a1b;
+  font-weight: 800;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 12px;
+  transition: 0.3s ease-in-out;
 }
 
-table {
-  background-color: hsl(84, 69%, 75%);
-  margin: 10px;
+.navbar a:hover {
+  border: 2px solid #1a1a1b;
+  background: linear-gradient(90deg, #c8daac 20%, #beda93 100%);
+  box-shadow: 0 0 3px #1a1a1b,
+    0 0 5px #1a1a1b
 }
 
-td {
-  padding: 5px;
-  text-align: center;
+.nav-container h1 {
+  font-family: 'Inter Bold', Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin: 0;
 }
 
-th {
-  padding: 5px;
-  text-align: center;
-  background-color: hsl(84, 54%, 61%);
+.nav-container #myPicture {
+  width: 75px;
+  height: 75px;
+  border: 2px solid;
+  border-radius: 100px;
+  background-image: url(/images/zaliasbatas.png);
+  background-position: center;
+  background-size: 75px;
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
-  border: 2px solid;
-  border-radius: 100px;
-  background-image: url(../images/zaliasbatas.png);
-  background-position: center;
-  background-size: 150px;
-  margin-left: 200px;
-  animation-name: slideLeft;
-  animation-duration: 2s;
-  animation-play-state: running;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+#icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#icons i {
+  margin: 0 7px;
+  cursor: pointer;
+  font-size: 2.3rem;
+}
+
+.fa-solid.fa-cart-shopping.fa-2xl {
+  color: #4f633d;
+  transition: 0.2s ease-in-out;
+}
+
+.fa-solid.fa-cart-shopping.fa-2xl:hover {
+  color: #768a63;
+}
+
+.fa-solid.fa-gear.fa-2xl{
+  color: #2e2d35;
+  transition: 0.2s ease-in-out;
+}
+.fa-solid.fa-gear.fa-2xl:hover{
+  color: #4f4e57;
+}
+.fa-solid.fa-user.fa-2xl{
+  color: #885254;
+  transition: 0.2s ease-in-out;
+}
+.fa-solid.fa-user.fa-2xl:hover{
+  color: #b4888a;
+}
+
+
+body {
+  background-color: #e2eed3;
+  overflow-x: hidden;
 }
 
 .pagination {
@@ -80,92 +139,6 @@ th {
 
 .oltitle {
   text-align: center;
-}
-
-.navbar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-  background-color: hsl(0, 0%, 100%);
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-  width: 60vh;
-}
-
-.navcontainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  background-color: hsl(0, 0%, 100%);
-}
-
-.navbar a {
-  color: hsl(0, 0%, 0%);
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  padding: 20px;
-  display: block;
-  text-align: center;
-}
-
-.navbar a:hover {
-  background-color: hsl(0, 0%, 90%);
-}
-
-.navbar li {
-  width: 33%;
-  font-weight: bold;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-evenly;
-  border: 1px solid hsl(0, 0%, 0%);
-  border-left: none;
-  border-right: none;
-  padding: 35px;
-  background-color: hsl(89, 44%, 83%);
-  box-shadow: 0px 0px 6px hsl(0, 0%, 19%);
-}
-
-.slogan {
-  text-align: center;
-  margin-right: 200px;
-  animation-name: slideRight;
-  animation-duration: 2s;
-  animation-play-state: running;
-}
-
-#slogan1 {
-  font-size: 40px;
-}
-
-#slogan2 {
-  font-size: 27px;
-}
-
-@keyframes slideRight {
-  from {
-    transform: translateX(300px);
-  }
-}
-
-@keyframes slideLeft {
-  from {
-    transform: translateX(-300px)
-  }
-
-}
-
-#aboutus {
-  border-left: 2px solid hsl(0, 0%, 0%);
-  border-right: 2px solid hsl(0, 0%, 0%);
 }
 
 .search {
