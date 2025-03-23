@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat B';
+    src: url(/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat XB';
+    src: url(/fonts/Montserrat-ExtraBold.ttf);
+}
+
+* {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(#e2e2dc, #b8b8b8);
+}
+
+/* HEADER STYLE */
+header {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: #eeede0d8;
+    z-index: 1000;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10rem;
+    font-size: 1.3rem;
+}
+
+.header-content h1 {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat XB';
+    cursor: pointer;
+    user-select: none;
+    gap: 15px;
+}
+
+.header-content h1::before {
+    content: '';
+    background-image: url(/images/logo-circular.png);
+    background-size: cover;
+    height: 45px;
+    width: 45px;
+}
+
+.navbar {
+    user-select: none;
+    word-spacing: 35px;
+}
+
+.navbar a {
+    display: inline-block;
+    font-family: 'Montserrat B';
+    text-decoration: none;
+    color: #000000;
+}
+
+.navbar a:hover {
+    color: #4d1ac5;
+}
+
+.header-content button {
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
+    padding: 20px 35px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: none;
+    color: #ffffff;
+    user-select: none;
+    box-shadow: 0 0 15px #754fcc;
+    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+    transition: 0.3s ease-in-out;
+}
+
+.header-content button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
+}
+
+.header-content button::after {
+    content: "\f019";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.header-content::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    content: "\f0ac";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    background-color: #6b3bda;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 15px #754fcc;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* ALL SECTIONS STYLE */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ALL WORDS THAT NEED TO BE BOLD */
+.bold-words{
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
+}
+
+/* HOME SECTION STYLE */
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 10rem;
+}
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 125px;
+    text-align: left;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.home-content p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    max-width: 90%;
+    
+}
+
+.home-content button {
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
+    padding: 20px 35px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    user-select: none;
+    box-shadow: 0 0 15px #754fcc;
+    align-self: flex-start;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+    transition: 0.3s ease-in-out;
+}
+
+.home-content button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
+}
+
+.home-content img {
+    float: right;
+    height: 425px;
+    width: 425px;
+    background: linear-gradient(90deg, #716097 15%, #6b3bda 75%);
+    border-radius: 50%;
+    margin-left: 30px;
+    box-shadow: 0 0 40px #716097;
+    transition: 0.3s ease-in-out;
+}
+
+.home-content img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 60px #716097, 0 0 60px #716097;
+}
+
+
+/* ABOUT SECTION STYLE */
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 10rem;
+}
+
+/* DOWNLOAD SECTION STYLE */
+.download{
+    background: radial-gradient(#e2e2dc, #b8b8b8);
+}
+
+
