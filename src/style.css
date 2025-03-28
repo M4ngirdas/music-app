@@ -78,7 +78,7 @@ header {
     color: #4d1ac5;
 }
 
-.header-content button {
+#download-btn {
     font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
     padding: 20px 35px;
     cursor: pointer;
@@ -92,12 +92,12 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-.header-content button:hover {
+#download-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
 }
 
-.header-content button::after {
+#download-btn::after {
     content: "\f019";
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
@@ -105,24 +105,58 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-.header-content::after{
+/* LANGUAGE CHANGE DROPDOWN STYLE */
+
+#change-lang-btn {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 30px;
-    content: "\f0ac";
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    background-color: #6b3bda;
-    color: #ffffff;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 0 15px #754fcc;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
+#change-lang-btn img {
+    height: 35px;
+    width: 35px;
+}
+
+#dropdown-menu {
+    display: none;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #e6e7dad8;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px;
+    padding: 10px;
+    margin-top: -10px;
+    position: absolute;
+    list-style: none;
+    cursor: pointer;
+}
+
+#dropdown-menu li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 10px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#dropdown-menu li:hover {
+    background-color: #c4c4c4;
+}
+
+#dropdown-menu img {
+    height: 35px;
+    width: 35px;
+}
+
+#change-lang:hover #dropdown-menu {
+    display: flex;
+}
 
 /* ALL SECTIONS STYLE */
 section {
@@ -133,7 +167,7 @@ section {
 }
 
 /* ALL WORDS THAT NEED TO BE BOLD */
-.bold-words{
+.bold-words {
     font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
 }
 
@@ -162,7 +196,7 @@ section {
     letter-spacing: 1px;
     margin-top: 10px;
     max-width: 90%;
-    
+
 }
 
 .home-content button {
@@ -196,7 +230,7 @@ section {
     transition: 0.3s ease-in-out;
 }
 
-.home-content img:hover{
+.home-content img:hover {
     transform: scale(1.03);
     box-shadow: 0 0 60px #716097, 0 0 60px #716097;
 }
@@ -205,13 +239,162 @@ section {
 /* ABOUT SECTION STYLE */
 .about {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 3rem 10rem;
 }
 
-/* DOWNLOAD SECTION STYLE */
-.download{
-    background: radial-gradient(#e2e2dc, #b8b8b8);
+.about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-image img {
+    max-width: 45rem;
+    max-height: 45rem;
+    top: 45rem;
+    left: 4rem;
+    position: absolute;
+    z-index: -1;
+}
+
+.about-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 7rem;
+    gap: 15px;
+    margin-top: 80px;
+    background: radial-gradient(#262627, #706e77);
+    color: #e2e2dc;
+    z-index: -2;
+    width: 900px;
+}
+
+.about-text #text-why,
+.about-text #text-mission {
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+}
+
+#text-mission p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+}
+
+.about-text h1 {
+    font-family: 'Montserrat B';
+}
+
+.about-text li {
+    list-style: none;
+}
+
+.stats-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 4rem;
+    top: 54.8rem;
+    width: 350px;
+    gap: 40px;
+}
+
+.stats{
+    display: flex;
+    align-items: center;
+    background-color: #eeede0;
+    box-shadow: 0 0 5px #5c5c5c;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    user-select: none;
+}
+
+.stats h1{
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.stats span{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.stats i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #9f86bb;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: #744cd1;
+    color: #e2e2dc;
+}
+
+.fa-solid.fa-music,
+.fa-solid.fa-microphone,
+.fa-solid.fa-headphones-simple{
+    height: 50px;
+    width: 50px;
+    padding: 30px;
 }
 
 
+/* DOWNLOAD SECTION STYLE */
+.download {
+    padding: 3rem 10rem;
+}
+
+.download-content {
+    display: flex;
+    margin-top: 125px;
+}
+
+#pc-download,
+#mobile-download{
+    display: flex;
+}
+
+.download-buttons button{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
+    padding: 20px 35px;
+    height: 60px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 10px;
+    border: none;
+    color: #ffffff;
+    user-select: none;
+    box-shadow: 0 0 15px #754fcc;
+    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+    transition: 0.3s ease-in-out;
+}
+
+.download-buttons i{
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+.download-buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
+}
+
+/* SELECTION STYLE */
+
+::selection{
+    background-color: #693dcf;
+    color: #e2e2dc;
+}

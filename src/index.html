@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/src/style.css">
     <script src="https://kit.fontawesome.com/2f35c9845e.js" crossorigin="anonymous"></script>
     <title>Melum - Just listen</title>
+    <script src="/src/script.js" defer></script>
 </head>
 
 <body>
@@ -20,6 +21,16 @@
                 <a href="#explore">Explore</a>
             </nav>
             <button id="download-btn">Download</button>
+            <div id="change-lang">
+                <button id="change-lang-btn">
+                    <img src="/images/uk-flag.png" alt="">
+                </button>
+                <ul id="dropdown-menu">
+                    <li><img src="/images/UK-flag.png" alt="English flag">English</li>
+                    <li><img src="/images/LT-flag.png" alt="Lithuania flag">Lietuvių</li>
+                    <li><img src="/images/DE-flag.png" alt="Germany flag">Deutsch</li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -28,7 +39,8 @@
             <div class="home-content">
                 <div>
                     <h1>Welcome to <span class="bold-words">Melum!</span></h1>
-                    <p id="myP">Discover endless music with Melum! Stream, download, and enjoy high-quality songs from your
+                    <p id="myP">Discover endless music with Melum! Stream, download, and enjoy high-quality songs from
+                        your
                         favorite artists and genres, anytime, anywhere. Your perfect playlist awaits!
                     </p>
                     <button id="app-btn">Open Melum</button>
@@ -40,7 +52,42 @@
         </section>
 
         <section id="about" class="about">
-            <h1>this is about section</h1>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/images/melum-mockup.png" alt="Melum iphone mockup">
+                </div>
+                <div class="about-text">
+                    <div id="text-why">
+                        <h1>Why Melum?</h1>
+                        <ul>
+                            <li>Its ad-free</li>
+                            <li>Has regular updates</li>
+                            <li>Minimalistic UI</li>
+                            <li>Limitless Music Library</li>
+                        </ul>
+                    </div>
+                    <div id="text-mission">
+                        <h1>Our Mission</h1>
+                        <p>We make discovering and enjoying music effortless, connecting you with the songs you love and
+                            new sounds that inspire</p>
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div id="stat-songs" class="stats">
+                        <i class="fa-solid fa-music"></i>
+                        <h1>Total Tracks Online <br> <span>10M+</span></h1>
+                    </div>
+                    <div id="stat-artist" class="stats">
+                        <i class="fa-solid fa-microphone"></i>
+                        <h1>Most Loved Artist <br> <span>Warsketis</span></h1>
+                    </div>
+                    <div id="stat-genre" class="stats">
+                        <i class="fa-solid fa-headphones-simple"></i>
+                        <h1>Today's Hot Genre <br> <span>Hip-Hop</span></h1>
+                    </div>
+                </div>
+            </div>
+            </div>
         </section>
 
         <section id="library" class="library">
@@ -51,8 +98,6 @@
             <h1>this is explore section</h1>
         </section>
     </main>
-
-    <script src="/src/script.js"></script>
 </body>
 
 </html>
