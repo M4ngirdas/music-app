@@ -1,4 +1,4 @@
-document.getElementById("download-btn").onclick = function () {
+document.getElementById("home-btn").onclick = function () {
     window.location.href = "/secondary/download.html";
 }
 

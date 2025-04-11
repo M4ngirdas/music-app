@@ -19,10 +19,16 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 
 body {
     background: radial-gradient(#e2e2dc, #b8b8b8);
+}
+
+#download-body {
+    padding-top: 60px;
+    overflow: hidden;
 }
 
 /* HEADER STYLE */
@@ -33,7 +39,7 @@ header {
     right: 15px;
     background-color: #eeede0d8;
     z-index: 1000;
-    border-radius: 10px;
+    border-radius: 30px;
     backdrop-filter: blur(5px);
 }
 
@@ -78,33 +84,6 @@ header {
     color: #4d1ac5;
 }
 
-#download-btn {
-    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
-    padding: 20px 35px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin: 0 10px;
-    border: none;
-    color: #ffffff;
-    user-select: none;
-    box-shadow: 0 0 15px #754fcc;
-    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
-    transition: 0.3s ease-in-out;
-}
-
-#download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
-}
-
-#download-btn::after {
-    content: "\f019";
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    margin-left: 10px;
-    transition: 0.3s ease-in-out;
-}
-
 /* LANGUAGE CHANGE DROPDOWN STYLE */
 
 #change-lang-btn {
@@ -124,10 +103,10 @@ header {
 #dropdown-menu {
     display: none;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 30px;
     background-color: #e6e7dad8;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 5px;
+    box-shadow: 0 0 3px #5c5c5c;
     padding: 10px;
     margin-top: -10px;
     position: absolute;
@@ -164,6 +143,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 3rem 10rem;
 }
 
 /* ALL WORDS THAT NEED TO BE BOLD */
@@ -172,18 +152,11 @@ section {
 }
 
 /* HOME SECTION STYLE */
-.home {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 10rem;
-}
-
 .home-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     margin-top: 125px;
-    text-align: left;
 }
 
 .home-content h1 {
@@ -196,27 +169,41 @@ section {
     letter-spacing: 1px;
     margin-top: 10px;
     max-width: 90%;
-
 }
 
 .home-content button {
+    font-size: 0.9rem;
     font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
     padding: 20px 35px;
     cursor: pointer;
     border-radius: 10px;
     border: none;
-    color: #ffffff;
+    outline: none;
+    color: #e2e2dc;
     user-select: none;
-    box-shadow: 0 0 15px #754fcc;
     align-self: flex-start;
     margin-top: 20px;
     background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+    height: 60px;
+    width: 175px;
+    box-shadow: 0 0 15px #716097, 0 0 15px #716097;
     transition: 0.3s ease-in-out;
 }
 
 .home-content button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
+}
+
+#home-btn {
+    margin-left: 10px;
+    border: 3px solid #4d1ac5;
+    background: transparent;
+    color: #4d1ac5;
+}
+
+#home-btn i {
+    font-size: 1rem;
+    margin-left: 4px;
 }
 
 .home-content img {
@@ -235,18 +222,9 @@ section {
     box-shadow: 0 0 60px #716097, 0 0 60px #716097;
 }
 
-
 /* ABOUT SECTION STYLE */
-.about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 10rem;
-}
-
 .about-content {
     display: flex;
-    flex-direction: column;
 }
 
 .about-image img {
@@ -262,7 +240,6 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    text-align: left;
     margin-left: 7rem;
     gap: 15px;
     margin-top: 80px;
@@ -270,32 +247,33 @@ section {
     color: #e2e2dc;
     z-index: -2;
     width: 900px;
-}
-
-.about-text #text-why,
-.about-text #text-mission {
-    font-size: 1.1rem;
-    border-radius: 10px;
-    padding: 20px;
-    width: 350px;
-}
-
-#text-mission p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 85%;
+    padding: 5rem;
+    box-shadow: 0 0 50px #706e77, 0 0 50px #706e77;
 }
 
 .about-text h1 {
-    font-family: 'Montserrat B';
+    letter-spacing: 2px;
+}
+
+.about-text li {
+    letter-spacing: 1px;
+}
+
+.about-text h1,
+.about-text li {
+    text-align: left;
+    width: 250px;
+}
+
+.about-text h1 {
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
 }
 
 .about-text li {
     list-style: none;
 }
 
-.stats-container{
+.stats-container {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -305,23 +283,23 @@ section {
     gap: 40px;
 }
 
-.stats{
+.stats {
     display: flex;
     align-items: center;
     background-color: #eeede0;
-    box-shadow: 0 0 5px #5c5c5c;
+    box-shadow: 0 0 3px #5c5c5c;
     gap: 30px;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 15px;
     user-select: none;
 }
 
-.stats h1{
+.stats h1 {
     flex-direction: column;
     font-size: 1rem;
 }
 
-.stats span{
+.stats span {
     display: flex;
     justify-content: center;
     margin-top: 10px;
@@ -329,7 +307,7 @@ section {
     font-size: 1.5rem;
 }
 
-.stats i{
+.stats i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -342,59 +320,161 @@ section {
 
 .fa-solid.fa-music,
 .fa-solid.fa-microphone,
-.fa-solid.fa-headphones-simple{
+.fa-solid.fa-headphones-simple {
     height: 50px;
     width: 50px;
     padding: 30px;
 }
 
-
 /* DOWNLOAD SECTION STYLE */
-.download {
-    padding: 3rem 10rem;
-}
-
-.download-content {
+.download-section {
     display: flex;
-    margin-top: 125px;
+    gap: 6rem;
+    text-align: center;
+    overflow: hidden;
 }
 
-#pc-download,
-#mobile-download{
+.app-stats,
+.download-container,
+.contact-container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(#262627, #706e77);
+    box-shadow: 0 0 30px #706e77;
+    border-radius: 30px;
+    padding: 0.8rem;
+    color: #e2e2dc;
 }
 
-.download-buttons button{
+.download-container {
+    padding: 2rem;
+    height: 535px;
+    width: 400px;
+}
+
+.app-stats,
+.contact-container {
+    height: 400px;
+    width: 250px;
+}
+
+.app-stats h2,
+.app-stats p {
+    margin-top: 10px;
+}
+
+.app-stats h2 {
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.app-stats p {
+    margin-top: 5px;
+    font-size: 1.1rem;
+}
+
+.app-stats img {
+    height: 11rem;
+    width: 11rem;
+    background: linear-gradient(90deg, #716097 15%, #6b3bda 75%);
+    border-radius: 50%;
+}
+
+#developer-link {
+    text-decoration: underline;
+    color: #cc5b5b;
+}
+
+.download-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.download-container h1 {
+    font-size: 1.8rem;
+}
+
+#download-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+#download-btn button {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
     padding: 20px 35px;
-    height: 60px;
-    width: 200px;
     cursor: pointer;
     border-radius: 10px;
-    margin: 0 10px;
     border: none;
     color: #ffffff;
     user-select: none;
-    box-shadow: 0 0 15px #754fcc;
+    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+    width: 180px;
+    transition: 0.3s ease-in-out;
+}
+
+#download-btn button:hover {
+    transform: translateY(-3px);
+}
+
+#download-btn button:active {
+    background: linear-gradient(90deg, #8371ac 15%, #764dd4 75%);
+}
+
+#download-btn i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.contact-container h2 {
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+#contact-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+#contact-btn i {
+    font-size: 1.7rem;
+}
+
+#contact-btn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #ffffff;
+    user-select: none;
     background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
     transition: 0.3s ease-in-out;
 }
 
-.download-buttons i{
-    margin-right: 10px;
-    font-size: 2rem;
+#contact-btn button:active {
+    background: linear-gradient(90deg, #8371ac 15%, #764dd4 75%);
 }
 
-.download-buttons button:hover {
+#contact-btn button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 15px #754fcc, 0 0 15px #754fcc;
 }
 
 /* SELECTION STYLE */
 
-::selection{
+::selection {
     background-color: #693dcf;
     color: #e2e2dc;
 }
