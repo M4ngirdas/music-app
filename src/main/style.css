@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: 'Montserrat SB';
+    src: url(/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
     font-family: 'Montserrat B';
     src: url(/fonts/Montserrat-Bold.ttf);
 }
@@ -13,6 +18,7 @@
     src: url(/fonts/Montserrat-ExtraBold.ttf);
 }
 
+/* GENERAL STYLES */
 * {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     padding: 0;
@@ -23,12 +29,39 @@
 }
 
 body {
-    background: radial-gradient(#e2e2dc, #b8b8b8);
+    background-color: #cfcfcf;
+}
+
+button {
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+    border-radius: 10px;
+}
+
+button:hover {
+    transform: translateY(-3px);
 }
 
 #download-body {
     padding-top: 60px;
     overflow: hidden;
+}
+
+/* SCROLLBAR STYLE */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #4d4d4d;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 20px;
+    width: 10px;
+    background-color: #747474;
+}
+
+/* ALL WORDS THAT NEED TO BE BOLD */
+.bold-words {
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
 }
 
 /* HEADER STYLE */
@@ -55,17 +88,15 @@ header {
     display: flex;
     align-items: center;
     font-family: 'Montserrat XB';
-    cursor: pointer;
     user-select: none;
     gap: 15px;
 }
 
-.header-content h1::before {
-    content: '';
-    background-image: url(/images/logo-circular.png);
-    background-size: cover;
+.header-content h1 img {
     height: 45px;
     width: 45px;
+    background: linear-gradient(90deg, #716097 15%, #6b3bda 75%);
+    border-radius: 50%;
 }
 
 .navbar {
@@ -84,13 +115,35 @@ header {
     color: #4d1ac5;
 }
 
+#header-btn {
+    font-size: 0.9rem;
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
+    padding: 20px 35px;
+    cursor: pointer;
+    margin: 0 10px;
+    border: none;
+    color: #ffffff;
+    user-select: none;
+
+}
+
+#header-btn:hover {
+    transform: translateY(-3px);
+}
+
+#header-btn i {
+    font-size: 1rem;
+    margin-left: 10px;
+
+}
+
 /* LANGUAGE CHANGE DROPDOWN STYLE */
 
 #change-lang-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
+    background: transparent;
     border: none;
     cursor: pointer;
 }
@@ -106,7 +159,6 @@ header {
     border-radius: 30px;
     background-color: #e6e7dad8;
     backdrop-filter: blur(5px);
-    box-shadow: 0 0 3px #5c5c5c;
     padding: 10px;
     margin-top: -10px;
     position: absolute;
@@ -146,17 +198,13 @@ section {
     padding: 3rem 10rem;
 }
 
-/* ALL WORDS THAT NEED TO BE BOLD */
-.bold-words {
-    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
-}
-
 /* HOME SECTION STYLE */
 .home-content {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 125px;
+    animation: slideUp 0.8s ease-in-out;
 }
 
 .home-content h1 {
@@ -171,37 +219,43 @@ section {
     max-width: 90%;
 }
 
-.home-content button {
+#home-btns {
+    display: flex;
+    gap: 10px;
+}
+
+#home-btns button {
+    display: flex;
+    align-items: center;
     font-size: 0.9rem;
     font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
     padding: 20px 35px;
     cursor: pointer;
-    border-radius: 10px;
-    border: none;
     outline: none;
-    color: #e2e2dc;
     user-select: none;
-    align-self: flex-start;
     margin-top: 20px;
-    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
     height: 60px;
     width: 175px;
-    box-shadow: 0 0 15px #716097, 0 0 15px #716097;
-    transition: 0.3s ease-in-out;
 }
 
-.home-content button:hover {
+#home-btns button:hover {
     transform: translateY(-3px);
 }
 
-#home-btn {
-    margin-left: 10px;
+#app-btn {
+    border: none;
+    color: #e2e2dc;
+}
+
+#download-btn {
     border: 3px solid #4d1ac5;
     background: transparent;
     color: #4d1ac5;
 }
 
-#home-btn i {
+#download-btn i {
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     margin-left: 4px;
 }
@@ -220,6 +274,22 @@ section {
 .home-content img:hover {
     transform: scale(1.03);
     box-shadow: 0 0 60px #716097, 0 0 60px #716097;
+}
+
+#home-bold {
+    font-family: 'Montserrat SB';
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* ABOUT SECTION STYLE */
@@ -287,7 +357,6 @@ section {
     display: flex;
     align-items: center;
     background-color: #eeede0;
-    box-shadow: 0 0 3px #5c5c5c;
     gap: 30px;
     border-radius: 30px;
     padding: 15px;
@@ -326,150 +395,203 @@ section {
     padding: 30px;
 }
 
-/* DOWNLOAD SECTION STYLE */
-.download-section {
-    display: flex;
-    gap: 6rem;
-    text-align: center;
-    overflow: hidden;
-}
-
-.app-stats,
-.download-container,
-.contact-container {
+/* EXPLORE SECTION STYLE */
+.explore-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background: radial-gradient(#262627, #706e77);
-    box-shadow: 0 0 30px #706e77;
-    border-radius: 30px;
-    padding: 0.8rem;
+    gap: 1.5rem;
+    margin-top: 125px;
+}
+
+#explore-btn {
     color: #e2e2dc;
-}
-
-.download-container {
-    padding: 2rem;
-    height: 535px;
-    width: 400px;
-}
-
-.app-stats,
-.contact-container {
-    height: 400px;
-    width: 250px;
-}
-
-.app-stats h2,
-.app-stats p {
-    margin-top: 10px;
-}
-
-.app-stats h2 {
-    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-}
-
-.app-stats p {
-    margin-top: 5px;
-    font-size: 1.1rem;
-}
-
-.app-stats img {
-    height: 11rem;
-    width: 11rem;
-    background: linear-gradient(90deg, #716097 15%, #6b3bda 75%);
-    border-radius: 50%;
-}
-
-#developer-link {
-    text-decoration: underline;
-    color: #cc5b5b;
-}
-
-.download-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.download-container h1 {
-    font-size: 1.8rem;
-}
-
-#download-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
-}
-
-#download-btn button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
-    font-size: 0.8rem;
+    padding: 20px 35px;
+    border: none;
+    cursor: pointer;
+}
+
+/* EXPLORE SEARCH BOX STYLE */
+.search-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.search-container button {
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
     padding: 20px 35px;
     cursor: pointer;
-    border-radius: 10px;
+    color: #e2e2dc;
     border: none;
-    color: #ffffff;
-    user-select: none;
-    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
-    width: 180px;
-    transition: 0.3s ease-in-out;
 }
 
-#download-btn button:hover {
-    transform: translateY(-3px);
-}
-
-#download-btn button:active {
-    background: linear-gradient(90deg, #8371ac 15%, #764dd4 75%);
-}
-
-#download-btn i {
-    font-size: 1.2rem;
-    margin-right: 5px;
-}
-
-.contact-container h2 {
-    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-}
-
-#contact-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 12px;
-}
-
-#contact-btn i {
-    font-size: 1.7rem;
-}
-
-#contact-btn button {
+#search-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 60px;
+}
+
+#search-box input {
+    display: flex;
+    height: 55px;
+    width: 550px;
     border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    color: #ffffff;
+    outline: none;
+    background-color: #eeede0;
+    font-size: 1.1rem;
+    padding: 0 60px;
+    border-radius: 30px;
     user-select: none;
-    background: linear-gradient(90deg, #716097 15%, #4d1ac5 75%);
+}
+
+#search-box i {
+    position: absolute;
+    left: 23%;
+    cursor: pointer;
+    font-size: 1.7rem;
+    color: #aaaaaa;
+    border-radius: 50%;
+    padding: 10px;
     transition: 0.3s ease-in-out;
 }
 
-#contact-btn button:active {
-    background: linear-gradient(90deg, #8371ac 15%, #764dd4 75%);
+.explore-suggestions{
+    display: flex;
+    flex-direction: column;
 }
 
-#contact-btn button:hover {
-    transform: translateY(-3px);
+.explore-suggestions button{
+    display: flex;
+    justify-content: flex-end;
+    width: 50px;
+}
+
+.sugg-row{
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.sugg-card{
+    position: relative;
+    height: 190px;
+    width: 160px;
+    cursor: pointer;
+    opacity: 90%;
+    transition: 0.2s ease-in-out;
+}
+
+.sugg-card:hover{
+    opacity: 100%;
+}
+
+.sugg-card:hover .sugg-text{
+    transform: translateY(5px);
+}
+
+.sugg-card:hover .sugg-example{
+    transform: translateY(-10px);
+}
+
+.sugg-text{
+    font-size: 0.9rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #e2e2dc;
+    width: 100%;
+    padding: 2px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: #32323a;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.sugg-text h2{
+    font-family: 'Montserrat SB', Arial, Helvetica, sans-serif;
+}
+
+.sugg-example{
+    background-color: #252529;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+/* HELP SECTION STYLE */
+.help-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.help-content h1{
+    font-family: 'Montserrat B', Arial, Helvetica, sans-serif;
+}
+
+#faq-container,
+#contact-form{
+    background-color: #eeede0;
+}
+
+#faq-container{
+    width: 450px;
+}
+
+#faq-container summary{
+    cursor: pointer;
+    user-select: none;
+}
+
+.faq-contact-container{
+    display: flex;
+    gap: 5rem;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: 1px solid #252527;
+    background-color: #eeede0;
+}
+
+#contact-form p{
+    display: inline-block;
+    padding: 0 5px;
+    margin-left: 10px;
+    transform: translateY(10px);
+    background-color: #eeede0;
+}
+
+#contact-form #message{
+    height: 100px;
+}
+
+#social-media{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#social-media button{
+    font-size: 1.5rem;
+    color: #e2e2dc;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* SELECTION STYLE */

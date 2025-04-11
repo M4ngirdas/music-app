@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src (main)/style.css">
+    <link rel="stylesheet" href="/src/main/style.css">
+    <link rel="icon" href="/images/melum-logo.png">
     <script src="https://kit.fontawesome.com/2f35c9845e.js" crossorigin="anonymous"></script>
     <title>Melum - Just listen</title>
 </head>
@@ -12,14 +13,15 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <h1>Melum.</h1>
+            <h1><img src="/images/logo-circular.png" alt="">Melum.</h1>
             <nav class="navbar">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#library">Library</a>
                 <a href="#explore">Explore</a>
+                <a href="#help">Help</a>
             </nav>
-            <button id="header-btn">Get Started</button>
+            <abbr title="Sign Up / Log In"><button id="header-btn">Get Started<i
+                        class="fa-solid fa-user"></i></button></abbr>
             <div id="change-lang">
                 <button id="change-lang-btn">
                     <img src="/images/uk-flag.png" alt="Current language flag">
@@ -34,16 +36,19 @@
     </header>
 
     <main>
+        <!-- HOME SECTION -->
         <section id="home">
             <div class="home-content">
                 <div>
                     <h1>Welcome to <span class="bold-words">Melum!</span></h1>
-                    <p id="myP">Discover endless music with Melum! Stream, download, and enjoy high-quality songs from
-                        your
-                        favorite artists and genres, anytime, anywhere. Your perfect playlist awaits!
+                    <p>Discover endless music with Melum! Stream, download, and enjoy high-quality songs from
+                        your favorite artists and genres everywhere. <span id="home-bold">Download or use the browser
+                            version!</span>
                     </p>
-                    <button id="app-btn">Open Melum</button>
-                    <button id="home-btn">Download<i class="fa-solid fa-download"></i></button>
+                    <div id="home-btns">
+                        <button id="app-btn">Open Melum</button>
+                        <button id="download-btn">Download<i class="fa-solid fa-download"></i></button>
+                    </div>
                 </div>
                 <div>
                     <img src="/images/logo-circular.png" alt="Melum Music App Logo">
@@ -51,6 +56,7 @@
             </div>
         </section>
 
+        <!-- ABOUT SECTION -->
         <section id="about">
             <div class="about-content">
                 <div class="about-image">
@@ -79,22 +85,164 @@
                     </div>
                     <div id="stat-genre" class="stats">
                         <i class="fa-solid fa-headphones-simple"></i>
-                        <h1>Today's Hot Genre <br> <span>Hip-Hop</span></h1>
+                        <h1>Today's Hot Genre <br> <span>Rock</span></h1>
                     </div>
                 </div>
             </div>
             </div>
         </section>
 
-        <section id="library" class="library">
-            <h1>this is library section</h1>
+        <!-- EXPLORE SECTION -->
+        <section id="explore">
+            <div class="explore-content">
+                <div class="search-container">
+                    <label id="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" list="songs" placeholder="What's on your mind?">
+                    </label>
+                    <button>Create a Playlist</button>
+                </div>
+                <div class="explore-suggestions">
+                    <div class="sugg-row">
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sugg-row">
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                        <div class="sugg-card">
+                            <div class="sugg-example"></div>
+                            <div class="sugg-text">
+                                <h2>Song Name</h2>
+                                <h3>Artist Name</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="explore" class="explore">
-            <h1>this is explore section</h1>
+        <!-- HELP SECTION -->
+        <section id="help">
+            <div class="help-content">
+                <div class="faq-contact-container">
+                    <div id="faq-container">
+                        <h1>FAQ<i class="fa-regular fa-lightbulb"></i></h1>
+                        <h3>General</h3>
+                        <details>
+                            <summary>What is Melum?</summary>
+                            Melum is a music streaming platform designed for smooth listening and a clean experience.
+                        </details>
+                        <details>
+                            <summary>Is Melum free to use?</summary>
+                            Yes, but for those who want more features there is Melum+.
+                        </details>
+                        <details>
+                            <summary>Do I need an account to listen?</summary>
+                            No, but if you want to create playlists you do.
+                        </details>
+                        <h3>Tech Details</h3>
+                        <details>
+                            <summary>Which browsers does Melum support?</summary>
+                            Brave, Chrome, Opera, Edge, Firefox and Safari.
+                        </details>
+                        <details>
+                            <summary>Does Melum work on mobile devices?</summary>
+                            Yes Melum is fully responsive and works on phones and tablets.
+                        </details>
+                        <details>
+                            <summary>A song isn't playing What should I do?</summary>
+                            Try refreshing the page or checking your internet connection.
+                        </details>
+                    </div>
+                    <div id="contact-form">
+                        <h1>Contact Us<i class="fa-solid fa-share"></i></h1>
+                        <span>
+                            <p>Email</p>
+                        </span>
+                        <input type="email">
+                        <span>
+                            <p>Subject</p>
+                        </span>
+                        <input type="text">
+                        <span>
+                            <p>Message</p>
+                        </span>
+                        <textarea id="message" rows="5" cols="40"></textarea>
+                        <div>
+                            <button type="submit">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="social-media">
+                    <h1>Social Media</h1>
+                    <button><i class="fa-brands fa-discord"></i></button>
+                    <button><i class="fa-brands fa-facebook"></i></button>
+                    <button><i class="fa-brands fa-instagram"></i></button>
+                </div>
+            </div>
         </section>
     </main>
-    <script src="/src/script.js"></script>
+    <script src="/src/main/script.js"></script>
 </body>
 
 </html>
