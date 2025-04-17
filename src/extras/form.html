@@ -5,18 +5,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/src/main/style.css">
+    <link rel="icon" href="/images/melum-logo.png">
     <script src="https://kit.fontawesome.com/2f35c9845e.js" crossorigin="anonymous"></script>
     <title>Melum - Just listen</title>
-    <script src="/src/script.js" defer></script>
 </head>
 
-<body id="download-body">
-    <main>
-        <section id="form">
-            <h1>this is form section</h1>
-        </section>
-    </main>
-    <script src="/src/main/script.js"></script>
+<body id="form-body">
+
+    <!-- Log in -->
+    <div class="login-content">
+        <div class="login-container">
+            <div id="login-img">
+                <img src="/images/logo-circular.png" alt="Melum Music App Logo">
+            </div>
+            <form id="login-form">
+                <h1>Log in to Melum</h1>
+                <div id="login-input">
+                    <span>
+                        <p>Email adress</p>
+                    </span>
+                    <input type="email">
+                    <span>
+                        <p>Password</p>
+                    </span>
+                    <input type="password">
+                </div>
+                <button type="submit">Continue</button>
+                <h5>Don't have an account? <a href="#" id="register-btn">Register</a></h5>
+                <h2>Or Log in With</h2>
+                <div id="login-other">
+                    <button><i class="fa-brands fa-google"></i></button>
+                    <button><i class="fa-brands fa-apple"></i></button>
+                    <button><i class="fa-brands fa-facebook-f"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register -->
+    <div class="register-content">
+        <div class="register-container">
+            <div id="register-img">
+                <img src="/images/logo-circular.png" alt="Melum Music App Logo">
+            </div>
+            <form id="register-form">
+                <h1>Register to Melum</h1>
+                <div id="register-input">
+                    <span>
+                        <p>Username</p>
+                    </span>
+                    <input type="text" maxlength="15" minlength="4">
+                    <span>
+                        <p>Email adress</p>
+                    </span>
+                    <input type="email">
+                    <span>
+                        <p>Password</p>
+                    </span>
+                    <input type="password" minlength="8" maxlength="24">
+                </div>
+                <button type="submit">Continue</button>
+                <h5>Already have an account? <a href="#" id="login-btn">Log in</a></h5>
+            </form>
+        </div>
+    </div>
+    <script src="/src/extras/extras.js"></script>
 </body>
 
 </html>

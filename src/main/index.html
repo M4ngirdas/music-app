@@ -11,9 +11,10 @@
 </head>
 
 <body>
+    <!-- header section -->
     <header class="header">
         <div class="header-content">
-            <h1><img src="/images/logo-circular.png" alt="">Melum.</h1>
+            <h1><img src="/images/melum-logo.png" alt="Melum Music App Logo">Melum</h1>
             <nav class="navbar">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -36,7 +37,7 @@
     </header>
 
     <main>
-        <!-- HOME SECTION -->
+        <!-- home section -->
         <section id="home">
             <div class="home-content">
                 <div>
@@ -56,7 +57,7 @@
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
+        <!-- about section -->
         <section id="about">
             <div class="about-content">
                 <div class="about-image">
@@ -92,7 +93,7 @@
             </div>
         </section>
 
-        <!-- EXPLORE SECTION -->
+        <!-- explore section -->
         <section id="explore">
             <div class="explore-content">
                 <div class="search-container">
@@ -181,43 +182,46 @@
             </div>
         </section>
 
-        <!-- HELP SECTION -->
+        <!-- help setion -->
         <section id="help">
             <div class="help-content">
                 <div class="faq-contact-container">
                     <div id="faq-container">
-                        <h1>FAQ<i class="fa-regular fa-lightbulb"></i></h1>
+                        <h1>FAQ</h1>
                         <h3>General</h3>
                         <details>
                             <summary>What is Melum?</summary>
-                            Melum is a music streaming platform designed for smooth listening and a clean experience.
+                            <span class="faq-answers">Melum is a music streaming platform designed for smooth listening
+                                and a clean experience.</span>
                         </details>
                         <details>
                             <summary>Is Melum free to use?</summary>
-                            Yes, but for those who want more features there is Melum+.
+                            <span class="faq-answers">Yes, it's 100% free.</span>
                         </details>
                         <details>
                             <summary>Do I need an account to listen?</summary>
-                            No, but if you want to create playlists you do.
+                            <span class="faq-answers">No, but if you want to create playlists you do.</span>
                         </details>
                         <h3>Tech Details</h3>
                         <details>
                             <summary>Which browsers does Melum support?</summary>
-                            Brave, Chrome, Opera, Edge, Firefox and Safari.
+                            <span class="faq-answers">Brave, Chrome, Opera, Edge, Firefox and Safari.</span>
                         </details>
                         <details>
                             <summary>Does Melum work on mobile devices?</summary>
-                            Yes Melum is fully responsive and works on phones and tablets.
+                            <span class="faq-answers">Yes, Melum is fully responsive and works on phones and
+                                tablets.</span>
                         </details>
                         <details>
                             <summary>A song isn't playing What should I do?</summary>
-                            Try refreshing the page or checking your internet connection.
+                            <span class="faq-answers">Try refreshing the page or checking your internet
+                                connection.</span>
                         </details>
                     </div>
                     <div id="contact-form">
-                        <h1>Contact Us<i class="fa-solid fa-share"></i></h1>
+                        <h1>Contact Us</h1>
                         <span>
-                            <p>Email</p>
+                            <p>Email adress</p>
                         </span>
                         <input type="email">
                         <span>
@@ -229,19 +233,59 @@
                         </span>
                         <textarea id="message" rows="5" cols="40"></textarea>
                         <div>
-                            <button type="submit">Send Message</button>
+                            <button type="submit">Send Message<i class="fa-solid fa-share"></i></button>
                         </div>
                     </div>
-                </div>
-                <div id="social-media">
-                    <h1>Social Media</h1>
-                    <button><i class="fa-brands fa-discord"></i></button>
-                    <button><i class="fa-brands fa-facebook"></i></button>
-                    <button><i class="fa-brands fa-instagram"></i></button>
                 </div>
             </div>
         </section>
     </main>
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-side">
+                <div class="app-name">
+                    <abbr title="Go back">
+                        <a href="#home">
+                            <h1><img src="/images/melum-logo.png" alt="Melum Music App Logo">Melum</h1>
+                        </a>
+                    </abbr>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-links">
+                    <div class="footer-link">
+                        <h2>Get the app</h2>
+                        <a href="#">Use on web</a>
+                        <a href="#">PC/Mobile download</a>
+                        <a href="#">Scan QR code</a>
+                    </div>
+                    <div class="footer-link">
+                        <h2>Explore</h2>
+                        <a href="#">Trending now</a>
+                        <a href="#">New releases</a>
+                        <a href="#">Genres & Moods</a>
+                        <a href="#">Top artists</a>
+                        <a href="#">Podcasts</a>
+                    </div>
+                    <div class="footer-link">
+                        <h2>Communities</h2>
+                        <a href="#">Join our Team</a>
+                        <a href="#">For Artists</a>
+                        <a href="#">Partner</a>
+                        <a href="#">Contribute</a>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <abbr title="Facebook"><button><i class="fa-brands fa-facebook-f"></i></button></abbr>
+                    <abbr title="Twitter"><button><i class="fa-brands fa-twitter"></i></button></abbr>
+                    <abbr title="Tiktok"><button><i class="fa-brands fa-tiktok"></i></button></abbr>
+                </div>
+            </div>
+            <hr>
+            <p>&copy; 2025 Melum. All rights reserved</p>
+        </div>
+    </footer>
     <script src="/src/main/script.js"></script>
 </body>
 
