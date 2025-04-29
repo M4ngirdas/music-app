@@ -1,12 +1,9 @@
 document.getElementById("register-btn").addEventListener("click", function (e) {
-    e.preventDefault();
     document.querySelector(".login-content").style.display = "none";
-    document.querySelector(".register-content").style.display = "block";
+    document.querySelector(".register-content").style.display = "flex";
 });
 
 document.getElementById("login-btn").addEventListener("click", function (e) {
-    e.preventDefault();
     document.querySelector(".register-content").style.display = "none";
-    document.querySelector(".login-content").style.display = "block";
+    document.querySelector(".login-content").style.display = "flex";
 });
-

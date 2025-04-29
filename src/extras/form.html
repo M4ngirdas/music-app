@@ -13,62 +13,57 @@
 <body id="form-body">
 
     <!-- Log in -->
-    <div class="login-content">
+    <!-- Login Content -->
+    <div class="login-content" id="login-content">
         <div class="login-container">
-            <div id="login-img">
-                <img src="/images/logo-circular.png" alt="Melum Music App Logo">
-            </div>
             <form id="login-form">
+                <div id="login-img">
+                    <img src="/images/melum-logo.png" alt="Melum Music App Logo">
+                </div>
                 <h1>Log in to Melum</h1>
-                <div id="login-input">
-                    <span>
-                        <p>Email adress</p>
-                    </span>
-                    <input type="email">
-                    <span>
-                        <p>Password</p>
-                    </span>
-                    <input type="password">
+                <div class="login-input">
+                    <p>Email address</p>
+                    <input type="email" placeholder="Email address" required>
+                    <p>Password</p>
+                    <input type="password" placeholder="Password" required>
                 </div>
                 <button type="submit">Continue</button>
-                <h5>Don't have an account? <a href="#" id="register-btn">Register</a></h5>
-                <h2>Or Log in With</h2>
-                <div id="login-other">
-                    <button><i class="fa-brands fa-google"></i></button>
-                    <button><i class="fa-brands fa-apple"></i></button>
-                    <button><i class="fa-brands fa-facebook-f"></i></button>
+                <div class="login-extra">
+                    <h5><a href="#">Forgot your password?</a></h5>
+                    <h5>Don't have an account? <a href="#" id="register-btn">Register</a></h5>
+                    <h2>Or Log in With</h2>
+                    <div id="login-other">
+                        <button><i class="fa-brands fa-google"></i></button>
+                        <button><i class="fa-brands fa-apple"></i></button>
+                        <button><i class="fa-brands fa-facebook-f"></i></button>
+                    </div>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Register -->
-    <div class="register-content">
+    <!-- Register Content -->
+    <div class="register-content" id="register-content">
         <div class="register-container">
-            <div id="register-img">
-                <img src="/images/logo-circular.png" alt="Melum Music App Logo">
-            </div>
             <form id="register-form">
+                <div id="register-img">
+                    <img src="/images/melum-logo.png" alt="Melum Music App Logo">
+                </div>
                 <h1>Register to Melum</h1>
-                <div id="register-input">
-                    <span>
-                        <p>Username</p>
-                    </span>
-                    <input type="text" maxlength="15" minlength="4">
-                    <span>
-                        <p>Email adress</p>
-                    </span>
-                    <input type="email">
-                    <span>
-                        <p>Password</p>
-                    </span>
-                    <input type="password" minlength="8" maxlength="24">
+                <div class="register-input">
+                    <p>Username</p>
+                    <input type="text" maxlength="15" minlength="4" placeholder="Username">
+                    <p>Email address</p>
+                    <input type="email" placeholder="Email address">
+                    <p>Password</p>
+                    <input type="password" minlength="8" maxlength="24" placeholder="Create Password">
                 </div>
                 <button type="submit">Continue</button>
                 <h5>Already have an account? <a href="#" id="login-btn">Log in</a></h5>
             </form>
         </div>
     </div>
+
     <script src="/src/extras/extras.js"></script>
 </body>
 
