@@ -45,6 +45,7 @@ button i {
 
 button:hover {
     transform: translateY(-2px);
+    opacity: 90%;
 }
 
 #download-body {
@@ -79,17 +80,6 @@ header {
     z-index: 1000;
     border-radius: 30px;
     backdrop-filter: blur(5px);
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-    }
-
-    to {
-        transform: translateY(0);
-    }
 }
 
 .header-content {
@@ -131,14 +121,19 @@ header {
 }
 
 #header-btn {
-    font-size: 0.9rem;
-    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
-    padding: 20px 35px;
+    height: 60px;
+    width: 165px;
+    padding: 0;
     cursor: pointer;
     margin: 0 10px;
     border: none;
-    color: #ffffff;
     user-select: none;
+}
+
+#header-btn span {
+    font-size: 0.9rem;
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
+    color: #ffffff;
 }
 
 #header-btn:hover {
@@ -151,55 +146,89 @@ header {
 
 }
 
-/* language change dropdown style */
-#change-lang-btn {
+/* language change style */
+.change-lang {
+    position: fixed;
+    top: 50%;
+    left: 15px;
+}
+
+#lang-btn{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+    background: #37373b;
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
 }
 
-#change-lang-btn img {
+
+#lang-btn span {
+    opacity: 0;
+    width: 0;
+    transform: translateX(-5px);
+    color: #e2e2dc; 
+    transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+#lang-btn:hover span {
+    opacity: 1;
+    transform: translateX(0);
+    width: 100px;
+    opacity: 1;
+    padding: 0 5px;
+}
+
+#lang-btn button{
+    background: #1f1f22;
+    border: none;
     height: 35px;
     width: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 100%;
+    transition: none;
 }
 
-#dropdown-menu {
+#lang-btn button:hover {
+    transform: translateY(0);
+}
+
+#lang-btn i {
+    color: #e2e2dc;
+    font-size: 1.5rem;
+}
+
+#lang-btn button:hover{
+    opacity: 90%;
+}
+
+#lang-options {
     display: none;
     flex-direction: column;
+    background: #1f1f22;
     border-radius: 30px;
-    background-color: #e6e7dad8;
-    backdrop-filter: blur(5px);
+    gap: 8px;
+    margin-top: 5px;
     padding: 10px;
-    margin-top: -10px;
-    position: absolute;
-    list-style: none;
-    cursor: pointer;
 }
 
-#dropdown-menu li {
+#lang-options a {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    margin-top: 10px;
-    padding: 7px 10px;
-    border-radius: 10px;
-    gap: 10px;
+    color: #e2e2dc;
+    font-size: 14px;
+    gap: 5px;
+    border-radius: 30px;
+    padding: 3px;
 }
 
-#dropdown-menu li:hover {
-    background-color: #c4c4c4;
+#lang-options a:hover{
+    background: #37373a;
 }
 
-#dropdown-menu img {
-    height: 35px;
-    width: 35px;
-}
-
-#change-lang:hover #dropdown-menu {
-    display: flex;
+#lang-options img {
+    height: 30px;
+    width: 30px;
 }
 
 /* all sections style */
@@ -217,7 +246,6 @@ section {
     flex-direction: row;
     align-items: center;
     margin-top: 125px;
-    animation: fadeIn 1s ease-in-out;
 }
 
 .home-content h1 {
@@ -259,6 +287,10 @@ section {
 #download-btn {
     border: 3px solid #4d1ac5;
     background: transparent;
+}
+
+#download-btn span {
+    font-family: 'Montserrat XB', Arial, Helvetica, sans-serif;
     color: #4d1ac5;
 }
 
@@ -288,26 +320,6 @@ section {
 
 #home-bold {
     font-family: 'Montserrat SB';
-}
-
-@keyframes slideUp {
-    from {
-        transform: translateY(50px);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
 }
 
 /* about section style */
@@ -768,14 +780,14 @@ section {
 }
 
 .login-input,
-.register-input{
+.register-input {
     display: flex;
     flex-direction: column;
     gap: .4rem;
 }
 
 .login-input p,
-.register-input p{
+.register-input p {
     font-family: 'Montserrat SB', Arial, Helvetica, sans-serif;
 }
 
@@ -833,7 +845,7 @@ section {
     color: #492a91;
 }
 
-#register-form h5{
+#register-form h5 {
     margin-top: 8px;
 }
 
@@ -872,7 +884,7 @@ section {
     font-size: 1.3rem;
 }
 
-.login-extra{
+.login-extra {
     display: flex;
     align-items: center;
     flex-direction: column;

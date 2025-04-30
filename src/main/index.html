@@ -16,39 +16,45 @@
         <div class="header-content">
             <h1><img src="/images/melum-logo.png" alt="Melum Music App Logo">Melum</h1>
             <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#explore">Explore</a>
-                <a href="#help">Help</a>
+                <a href="#home" data-i18n="nav-home">Home</a>
+                <a href="#about" data-i18n="nav-about">About</a>
+                <a href="#explore" data-i18n="nav-explore">Explore</a>
+                <a href="#help" data-i18n="nav-help">Help</a>
             </nav>
-            <abbr title="Sign Up / Log In"><button id="header-btn">Get Started<i
+            <abbr title="Sign Up / Log In"><button id="header-btn"><span data-i18n="nav-btn">Get Started</span> <i
                         class="fa-solid fa-user"></i></button></abbr>
-            <div id="change-lang">
-                <button id="change-lang-btn">
-                    <img src="/images/uk-flag.png" alt="Current language flag">
-                </button>
-                <ul id="dropdown-menu">
-                    <li><img src="/images/UK-flag.png" alt="English flag">English</li>
-                    <li><img src="/images/LT-flag.png" alt="Lithuania flag">Lietuvių</li>
-                    <li><img src="/images/DE-flag.png" alt="Germany flag">Deutsch</li>
-                </ul>
-            </div>
         </div>
     </header>
 
     <main>
+        <!-- change language selection -->
+        <div class="change-lang">
+            <div class="change-lang-content">
+                <div id="lang-btn">
+                    <button><i class="fa-solid fa-globe"></i></button>
+                    <span>Language</span>
+                </div>
+                <div id="lang-options">
+                    <a href="#" class="lang-option"><img src="/images/EN-flag.png" alt="English flag">English</a>
+                    <a href="#" class="lang-option"><img src="/images/LT-flag.png" alt="Lithuanian flag">Lietuvių</a>
+                    <a href="#" class="lang-option"><img src="/images/DE-flag.png" alt="German flag">Deutsch</a>
+                </div>
+            </div>
+        </div>
         <!-- home section -->
         <section id="home">
             <div class="home-content">
                 <div>
-                    <h1>Welcome to <span class="bold-words">Melum!</span></h1>
-                    <p>Discover endless music with Melum! Stream, download, and enjoy high-quality songs from
+                    <h1 data-i18n="home-greeting">Welcome to <span class="bold-words">Melum!</span></h1>
+                    <p data-i18n="home-text">Discover endless music with Melum! Stream, download, and enjoy high-quality
+                        songs from
                         your favorite artists and genres everywhere. <span id="home-bold">Download or use the browser
                             version!</span>
                     </p>
                     <div id="home-btns">
-                        <button id="app-btn">Open Melum</button>
-                        <button id="download-btn">Download<i class="fa-solid fa-download"></i></button>
+                        <button id="app-btn" data-i18n="open-app">Open Melum</button>
+                        <button id="download-btn" data-i18n="download-app"><span>Download</span><i
+                                class="fa-solid fa-download"></i></button>
                     </div>
                 </div>
                 <div>
